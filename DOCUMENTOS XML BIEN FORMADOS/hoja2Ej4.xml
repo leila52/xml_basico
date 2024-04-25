@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<series>
+    <serie nombre="Stranger things" plataforma="Netflix" />
+    <serie nombre="Westworld" plataforma="HBO" />
+    <serie nombre="Vikings" plataforma="Netflix" />
+    <serie nombre="Vikings" plataforma="Amazon Prime Video" />
+</series>

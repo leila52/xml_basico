@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
+<pelicula>
+ <director>Alejandro Amenábar</director>
+  <titulo>Tesis</titulo>
+</pelicula>
+<pelicula>
+ <director>Todo sobre mi madre</director>
+ <titulo>Pedro Almodóvar</titulo>
+</pelicula>
+</peliculas>

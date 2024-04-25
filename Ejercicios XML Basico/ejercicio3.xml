@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<equipos_futbol>
+  <equipo>
+    <nombre>Átletico de Madrid</nombre>
+    <ciudad>Madrid</ciudad>
+    <entrenador>Diego Simeone</entrenador>
+    <jugador posicion="delantero">
+      <nombre>Antoine Griezmann</nombre>
+      <nacionalidad>Francés</nacionalidad>
+    </jugador>
+    <jugador posicion="defensa">
+      <nombre>Nahuel Molina</nombre>
+      <nacionalidad>Argentino</nacionalidad>
+    </jugador>
+  </equipo>
+  <equipo>
+    <nombre>Fútbol Club Barcelona</nombre>
+    <ciudad>Barcelona</ciudad>
+    <entrenador>Xavi Hernandéz</entrenador>
+    <jugador posicion="delantero">
+      <nombre>Lamine Yamal</nombre>
+      <nacionalidad>Español</nacionalidad>
+    </jugador>
+    <jugador posicion="defensa">
+      <nombre>Pau Cubarsí</nombre>
+      <nacionalidad>Español</nacionalidad>
+    </jugador>
+  </equipo>
+</equipos_futbol>
