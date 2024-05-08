@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE matematicas [
+<!ELEMENT matematicas (matematica*)>
+<!ELEMENT matematica (nombre, nacimiento)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nacimiento (#PCDATA)>
+]>
+<matematicas>
+    <matematica>
+        <nombre>Ada Lovelace</nombre>
+        <nacimiento>10 de diciembre de 1815</nacimiento>
+    </matematica>
+    <matematica>
+        <nombre>Susan Landau</nombre>
+        <nacimiento>3 de junio de 1954</nacimiento>
+    </matematica>
+</matematicas>

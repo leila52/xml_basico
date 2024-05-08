@@ -1,0 +1,10 @@
+<!DOCTYPE elementos [
+<!ELEMENT elementos (pcdata*, any+, vacio)>
+<!ELEMENT pcdata (#PCDATA)>
+<!ELEMENT any ANY>
+<!ELEMENT vacio EMPTY>
+]>
+<elementos>
+    <any/>
+    <vacio/>
+</elementos>
