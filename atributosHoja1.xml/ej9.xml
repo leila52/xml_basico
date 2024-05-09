@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE material [
+<!ELEMENT material (elemento)+>
+<!ELEMENT elemento (#PCDATA)>
+<!ATTLIST elemento color CDATA #FIXED "verde">
+]>
+<material>
+    <elemento nombre="bolígrafo" color=""/>
+    <elemento nombre="cuaderno" color="verde"/>
+    <elemento nombre="rotulador" color="verde"/>
+</material>

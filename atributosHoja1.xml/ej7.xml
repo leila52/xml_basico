@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE figuras [
+<!ELEMENT figuras (cuadrado, triangulo, circulo, otra)>
+<!ELEMENT cuadrado (#PCDATA)>
+<!ATTLIST cuadrado lados CDATA #REQUIRED>
+<!ELEMENT triangulo (#PCDATA)>
+<!ATTLIST triangulo lados CDATA #REQUIRED>
+<!ELEMENT circulo (#PCDATA)>
+<!ELEMENT otra EMPTY>
+<!ATTLIST otra lados CDATA #REQUIRED>
+]>
+<figuras>
+    <cuadrado lados="4">ventana</cuadrado>
+    <circulo lados="">plato</circulo>
+    <triangulo lados="3">señal</triangulo>
+    <otra lados="7"/>
+</figuras>

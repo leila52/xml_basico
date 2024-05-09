@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE notas [
+<!ELEMENT notas (modulo*)>
+<!ELEMENT modulo EMPTY>
+<!ATTLIST modulo nombre CDATA #REQUIRED>
+<!ATTLIST modulo nota CDATA #REQUIRED>
+]>
+<notas>
+    <modulo nombre="Marcas" nota="9" />
+    <modulo nombre="Programacion" nota="7" />
+</notas>

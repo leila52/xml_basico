@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros [
+<!ELEMENT libros (libro*)>
+<!ELEMENT libro EMPTY>
+<!ATTLIST libro titulo ID #REQUIRED>
+<!ATTLIST libro autor CDATA #REQUIRED>
+]>
+<libros>
+    <libro titulo="Los_Pilares_de_la_Tierra2" autor="Ken Follet" />
+</libros>

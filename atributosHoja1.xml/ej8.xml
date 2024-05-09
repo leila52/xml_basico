@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE grupo [
+<!ELEMENT grupo (alumno)*>
+<!ELEMENT alumno EMPTY>
+<!ATTLIST alumno nombre CDATA #REQUIRED>
+<!ATTLIST alumno fecha_de_nacimiento CDATA #IMPLIED>
+]>
+<grupo>
+    <alumno nombre="Sara Martínez" fecha_de_nacimiento="2001"/>
+    <alumno nombre="Esther García"/>
+    <alumno nombre="José Luis Pérez" fecha_de_nacimiento="1998"/>
+</grupo>
