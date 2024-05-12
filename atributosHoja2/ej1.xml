@@ -1,0 +1,5 @@
+<!DOCTYPE libro [
+<!ELEMENT libro EMPTY>
+<!ATTLIST libro autor CDATA #REQUIRED>
+]>
+<libro autor="Ken Follet" />

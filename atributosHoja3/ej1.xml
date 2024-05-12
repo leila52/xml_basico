@@ -1,0 +1,86 @@
+<!ELEMENT recibo (datos_empresa, datos_cliente, datos_recibo)>
+<!ATTLIST recibo
+    numRecibo ID #REQUIRED>
+
+<!ELEMENT datos_empresa (nombre, direccion, poblacion, provincia, cif, telefono?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ATTLIST poblacion
+    cod_postal CDATA #REQUIRED>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT cif (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+
+<!ELEMENT datos_cliente (nombre, direccionEnvio, poblacion, provincia)>
+<!ATTLIST datos_cliente
+    numCliente ID #REQUIRED>
+<!ELEMENT direccionEnvio (#PCDATA)>
+
+<!ELEMENT datos_recibo (fecha, linea+, base, cuota_iva, total)>
+<!ATTLIST datos_recibo
+    n_ped ID #REQUIRED
+    iva CDATA #REQUIRED
+    formaPago (Bizzum|Tarjeta|PayPal) #REQUIRED
+    moneda CDATA #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT linea (referencia, descripcion, cantidad, precio, importe)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT importe (#PCDATA)>
+<!ELEMENT base (#PCDATA)>
+<!ELEMENT cuota_iva (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+
+<recibo numRecibo="P999">
+    <datos_empresa>
+    <nombre>Flowers, S.A</nombre>
+    <direccion>C/Estancado</direccion>
+    <poblacion cod_postal="28043">Madrid</poblacion>
+    <provincia>Madrid</provincia>
+    <cif>B-9876543</cif>
+    <telefono/>
+    </datos_empresa>
+    <datos_cliente numCliente="C658">
+    <nombre>Victoria Cruz</nombre>
+    <direccionEnvio>Plaza Magallón 15</direccionEnvio>
+    <poblacion cod_postal="28011">Madrid</poblacion>
+    <provincia>Madrid</provincia>
+    </datos_cliente>
+    <datos_recibo n_ped="P731" iva="16" formaPago="Bizzum" moneda="euro">
+    <fecha>12-01-2023</fecha>
+    <linea>
+    <referencia>OR000137</referencia>
+    <descripcion>Camelia japonica</descripcion>
+    <cantidad>1</cantidad>
+    <precio>230</precio>
+    <importe>266,80</importe>
+    </linea>
+    <linea>
+    <referencia>U0011679</referencia>
+    <descripcion>Sierra de Poda 400MM</descripcion>
+    <cantidad>1</cantidad>
+    <precio>180</precio>
+    <importe>208,80</importe>
+    </linea>
+    <linea>
+    <referencia>U0051323</referencia>
+    <descripcion>Azadón</descripcion>
+    <cantidad>2</cantidad>
+    <precio>40</precio>
+    <importe>92,80</importe>
+    </linea>
+    <linea>
+    <referencia>FR102500</referencia>
+    <descripcion>Olea-Olivos</descripcion>
+    <cantidad>4</cantidad>
+    <precio>120</precio>
+    <importe>556,80</importe>
+    </linea>
+    <base>970,00</base>
+    <cuota_iva>155,20</cuota_iva>
+    <total>1125,20</total>
+    </datos_recibo>
+    </recibo>

@@ -1,0 +1,59 @@
+<!ELEMENT listacursos (curso+)>
+<!ELEMENT curso (alumno+)>
+<!ELEMENT alumno (DNI, nombre, apellido+, asignaturas)>
+<!ELEMENT asignaturas (asignatura+)>
+<!ELEMENT asignatura (nombre, profesor)>
+<!ATTLIST asignatura
+    codigo CDATA #REQUIRED>
+<!ELEMENT profesor (NRP, nombre, apellido+)>
+
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT asignatura (#PCDATA)>
+<!ELEMENT NRP (#PCDATA)>
+
+<!DOCTYPE listacursos SYSTEM "listacursos.dtd">
+<listacursos>
+    <curso>
+        <alumno>
+            <DNI>12345678A</DNI>
+            <nombre>Juan</nombre>
+            <apellido>Pérez</apellido>
+            <apellido>Gómez</apellido>
+            <asignaturas>
+                <asignatura codigo="M001">
+                    <nombre>Matemáticas</nombre>
+                    <profesor>
+                        <NRP>001</NRP>
+                        <nombre>María</nombre>
+                        <apellido>García</apellido>
+                    </profesor>
+                </asignatura>
+                <asignatura codigo="F001">
+                    <nombre>Física</nombre>
+                    <profesor>
+                        <NRP>002</NRP>
+                        <nombre>Luis</nombre>
+                        <apellido>Ruiz</apellido>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+        <alumno>
+            <DNI>87654321B</DNI>
+            <nombre>María</nombre>
+            <apellido>López</apellido>
+            <asignaturas>
+                <asignatura codigo="I001">
+                    <nombre>Inglés</nombre>
+                    <profesor>
+                        <NRP>003</NRP>
+                        <nombre>David</nombre>
+                        <apellido>Rodríguez</apellido>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+    </curso>
+</listacursos>

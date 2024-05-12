@@ -1,0 +1,60 @@
+<!ELEMENT afiliados (afiliado+)>
+<!ELEMENT afiliado (DNI | NIE, nombre, apellidos, situacion_laboral, fecha_nacimiento, bajas?, prestaciones_cobradas?)>
+<!ELEMENT bajas (baja*)>
+<!ELEMENT baja (causa, fecha_inicio, fecha_final?)>
+<!ELEMENT prestaciones_cobradas (prestacion+)>
+<!ELEMENT prestacion (cantidad, fecha_inicio, fecha_final)>
+
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT NIE (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT situacion_laboral (#PCDATA)>
+<!ELEMENT fecha_nacimiento (dia, mes, anio)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT causa (#PCDATA)>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_final (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+
+<!DOCTYPE afiliados SYSTEM "seguridad_social.dtd">
+<afiliados>
+    <afiliado>
+        <DNI>12345678A</DNI>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez Gómez</apellidos>
+        <situacion_laboral>en_activo</situacion_laboral>
+        <fecha_nacimiento>
+            <dia>15</dia>
+            <mes>05</mes>
+            <anio>1985</anio>
+        </fecha_nacimiento>
+        <bajas>
+            <baja>
+                <causa>Enfermedad</causa>
+                <fecha_inicio>2023-04-10</fecha_inicio>
+                <fecha_final>2023-05-20</fecha_final>
+            </baja>
+        </bajas>
+        <prestaciones_cobradas>
+            <prestacion>
+                <cantidad>500</cantidad>
+                <fecha_inicio>2022-03-01</fecha_inicio>
+                <fecha_final>2022-06-30</fecha_final>
+            </prestacion>
+        </prestaciones_cobradas>
+    </afiliado>
+    <afiliado>
+        <NIE>X1234567Z</NIE>
+        <nombre>María</nombre>
+        <apellidos>López Martínez</apellidos>
+        <situacion_laboral>jubilado</situacion_laboral>
+        <fecha_nacimiento>
+            <dia>25</dia>
+            <mes>12</mes>
+            <anio>1950</anio>
+        </fecha_nacimiento>
+    </afiliado>
+</afiliados>

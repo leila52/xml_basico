@@ -1,0 +1,11 @@
+<!DOCTYPE Tareas [
+<!ELEMENT Tareas (tarea*)>
+<!ELEMENT tarea (#PCDATA)>
+<!ATTLIST tarea fecha CDATA #REQUIRED>
+<!ATTLIST tarea asunto CDATA #REQUIRED>
+<!ATTLIST tarea fechaLimite CDATA #REQUIRED>
+]>
+<Tareas>
+<tarea fecha="20 de Enero de 2023" asunto="Preparar ejercicios de DTDs" fechaLimite="23 de Enero de 2023"/>
+<tarea fecha="21 de febrero de 2023" asunto="Preparar tema XSLT" fechaLimite="5 de marzo de 2023"/>
+</Tareas>
