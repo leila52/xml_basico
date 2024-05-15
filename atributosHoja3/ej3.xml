@@ -1,6 +1,40 @@
-<!ELEMENT personas (persona+)>
-<!ELEMENT persona (nombre, edad, direccion+, (nacimiento)?)>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+<!ELEMENT personas (persona)*>
+<!ELEMENT persona (nombre , nacimiento? , direccion+ , sexo)>
 <!ELEMENT nombre (#PCDATA)>
-<!ELEMENT edad (#PCDATA)>
-<!ELEMENT direccion (#PCDATA)>
 <!ELEMENT nacimiento (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT direccion (calle , poblacion , provincia , cpostal)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT cpostal (#PCDATA)>
+<!ATTLIST nacimiento dia CDATA #IMPLIED>
+<!ATTLIST nacimiento mes CDATA #IMPLIED>
+<!ATTLIST nacimiento anyo CDATA #IMPLIED>
+]>
+<personas>
+  <persona>
+    <nombre>Juan Pardo</nombre>
+    <nacimiento dia="10" mes="abril" anyo="1982"/>
+    <direccion>
+      <calle>caoba, 1</calle>
+      <poblacion>Madrid</poblacion>
+      <provincia>Madrid</provincia>
+      <cpostal>28005</cpostal>
+    </direccion>
+    <sexo>varon</sexo>
+  </persona>
+  <persona>
+    <nombre>Juana García</nombre>
+    <nacimiento mes="julio"/>
+    <direccion>
+      <calle>Malasaña, 1</calle>
+      <poblacion>Madrid</poblacion>
+      <provincia>Madrid</provincia>
+      <cpostal>28015</cpostal>
+    </direccion>
+    <sexo>mujer</sexo>
+  </persona>
+</personas>

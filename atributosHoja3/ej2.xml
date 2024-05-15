@@ -1,67 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cartelera [
 <!ELEMENT cartelera (película+)>
-<!ELEMENT película (título, título_original?, nacionalidad, género, clasificación?, sinopsis, director, reparto+, web?, cartel?)>
-<!ATTLIST película
-    código ID #REQUIRED
-    duración CDATA #REQUIRED
-    año CDATA "2022">
-
+<!ELEMENT película (título, título_original?, nacionalidad, género, (clasificación | sin_clasificar)?, sinopsis, director, reparto+, web?, cartel?)>
 <!ELEMENT título (#PCDATA)>
 <!ELEMENT título_original (#PCDATA)>
 <!ELEMENT nacionalidad (#PCDATA)>
 <!ELEMENT género (#PCDATA)>
 <!ELEMENT clasificación EMPTY>
-<!ATTLIST clasificación
-    edad (TP|7|12|16|18) #REQUIRED>
+<!ATTLIST clasificación edad (TP | 7 | 12 | 16 | 18) #REQUIRED>
 <!ELEMENT sin_clasificar EMPTY>
 <!ELEMENT sinopsis (#PCDATA)>
 <!ELEMENT director (#PCDATA)>
-<!ELEMENT reparto (#PCDATA)>
+<!ELEMENT reparto (actor+)>
+<!ELEMENT actor (#PCDATA)>
 <!ELEMENT web (#PCDATA)>
 <!ELEMENT cartel (#PCDATA)>
 
+<!ATTLIST película
+    código CDATA #REQUIRED
+    duración CDATA #REQUIRED
+    año CDATA "2022">
+
+]>
 <cartelera>
     <película código="P1" duración="138" año="2021">
-    <título>NO MIRES ARRIBA</título>
-    <título_original>Don't look up</título_original>
-    <nacionalidad>Estados Unidos</nacionalidad>
-    <género>Comedia</género>
-    <clasificación edad="TP"/>
-    <sinopsis>
-    Kate Dibiasky, estudiante de posgrado de Astronomía, y su profesor, el doctor Randall Mindy hacen un
-    descubrimiento tan asombros como terrorífico: un enorme cometa lleva un rumbo de colisión directa con
-    la Tierra. El otro problema es que a nadie le importa. Solo quedan seis meses para el impacto del
-    cometa, pero gestionar el flujo de noticias y ganarse la atención de un público obsesionado con las
-    redes sociales antes de que sea demasiado tarde resulta sorprendentemente cómico. ¿Pero qué es lo que
-    hay que hacer para que el mundo mire hacia arriba?
-    </sinopsis>
-    <director>Adam McKay</director>
-    <reparto>
-    <actor>Leonardo DiCaprio</actor>
-    <actor>Jennifer Lawrence</actor>
-    <actor>Meryl Streep</actor>
-    </reparto>
-    <web>http://www.nma.es</web>
-    <cartel>carteles/noMiresArriba.jpg</cartel>
+        <título>NO MIRES ARRIBA</título>
+        <título_original>Don't look up</título_original>
+        <nacionalidad>Estados
+            Unidos</nacionalidad>
+        <género>Comedia</género>
+        <clasificación edad="TP" />
+        <sinopsis>
+            Kate Dibiasky, estudiante de posgrado de Astronomía, y su profesor, el doctor Randall
+            Mindy hacen un
+            descubrimiento tan asombros como terrorífico: un enorme cometa lleva un rumbo de
+            colisión directa con
+            la Tierra. El otro problema es que a nadie le importa. Solo quedan seis meses para el
+            impacto del
+            cometa, pero gestionar el flujo de noticias y ganarse la atención de un público
+            obsesionado con las
+            redes sociales antes de que sea demasiado tarde resulta sorprendentemente cómico. ¿Pero
+            qué es lo que
+            hay que hacer para que el mundo mire hacia arriba?
+        </sinopsis>
+        <director>Adam
+            McKay</director>
+        <reparto>
+            <actor>Leonardo DiCaprio</actor>
+            <actor>Jennifer Lawrence</actor>
+            <actor>Meryl Streep</actor>
+        </reparto>
+        <web>http://www.nma.es</web>
+        <cartel>
+            carteles/noMiresArriba.jpg</cartel>
     </película>
     <película código="P23" duración="154">
-    <título>Los renglones torcidos de Dios</título>
-    <nacionalidad>España</nacionalidad>
-    <género>Intriga</género>
-    <sin_clasificar/>
-    <sinopsis>
-    Alice, investigadora privada, ingresa en un hospital psiquiátrico simulando una paranoia. Su objetivo
-    es recabar pruebas del caso en el que trabaja: la muerte de un interno en circunstancias poco claras.
-    Sin embargo, la realidad a la que se enfrentará en su encierro superará sus expectativas y pondrá en
-    duda su propia cordura. Un mundo desconocido y apasionante se mostrará ante sus ojos. Adaptación de la
-    novela homónima de Torcuato Luca de Tena.
-    </sinopsis>
-    <director>Oriol Paulo</director>
-    <reparto>
-    <actor>Bárbara Lennie</actor>
-    <actor>Eduard Fernández</actor>
-    <actor>Loreto Mauleón</actor>
-    <actor>Pablo Derqui</actor>
-    <actor>Javier Beltrán</actor>
-    </reparto>
+        <título>Los renglones torcidos de Dios</título>
+        <nacionalidad>España</nacionalidad>
+        <género>
+            Intriga</género>
+        <sin_clasificar />
+        <sinopsis>
+            Alice, investigadora privada, ingresa en un hospital psiquiátrico simulando una
+            paranoia. Su objetivo
+            es recabar pruebas del caso en el que trabaja: la muerte de un interno en circunstancias
+            poco claras.
+            Sin embargo, la realidad a la que se enfrentará en su encierro superará sus expectativas
+            y pondrá en
+            duda su propia cordura. Un mundo desconocido y apasionante se mostrará ante sus ojos.
+            Adaptación de la
+            novela homónima de Torcuato Luca de Tena.
+        </sinopsis>
+        <director>Oriol
+            Paulo</director>
+        <reparto>
+            <actor>Bárbara Lennie</actor>
+            <actor>Eduard Fernández</actor>
+            <actor>Loreto Mauleón</actor>
+            <actor>Pablo Derqui</actor>
+            <actor>Javier Beltrán</actor>
+        </reparto>
     </película>
-    </cartelera>
+</cartelera>
