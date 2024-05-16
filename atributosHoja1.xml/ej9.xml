@@ -5,7 +5,7 @@
 <!ATTLIST elemento color CDATA #FIXED "verde">
 ]>
 <material>
-    <elemento nombre="bolígrafo" color=""/>
-    <elemento nombre="cuaderno" color="verde"/>
-    <elemento nombre="rotulador" color="verde"/>
+    <elemento  color="verde" >bolígrafo</elemento>
+    <elemento color="verde">cuaderno</elemento>
+    <elemento  color="verde">rotulador</elemento>
 </material>

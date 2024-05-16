@@ -10,16 +10,16 @@
 ]>
 <geografia>
     <paises>
-        <pais codpais="1">Argentina</pais>
-        <pais codpais="2">Austria</pais>
-        <pais codpais="3">Japón</pais>
-        <pais codpais="4">Noruega</pais>
+        <pais codpais="id1">Argentina</pais>
+        <pais codpais="id2">Austria</pais>
+        <pais codpais="id3">Japón</pais>
+        <pais codpais="id4">Noruega</pais>
     </paises>
     <ciudades>
-        <ciudad pais="3">Osaka</ciudad>
-        <ciudad pais="4">Oslo</ciudad>
-        <ciudad pais="">Sevilla</ciudad>
-        <ciudad pais="3">Tokio</ciudad>
-        <ciudad pais="2">Viena</ciudad>
+        <ciudad pais="id3">Osaka</ciudad>
+        <ciudad pais="id4">Oslo</ciudad>
+        <ciudad pais="id2">Sevilla</ciudad>
+        <ciudad pais="id3">Tokio</ciudad>
+        <ciudad pais="id2">Viena</ciudad>
     </ciudades>
 </geografia>

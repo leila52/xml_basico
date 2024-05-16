@@ -18,7 +18,8 @@
         <ingrediente coding="JAM">Jamón de York</ingrediente>
     </ingredientes>
     <tipos>
-        <tipo nombre="Fantástica" ingredientes="CAL, CHA"/>
-        <tipo nombre="Sabrosa" ingredientes="CHA, CHO, JAM, HUE"/>
+        <!--no comas solo espacios-->
+        <tipo nombre="Fantástica" ingredientes="CAL CHA"/>
+        <tipo nombre="Sabrosa" ingredientes="CHA CHO JAM HUE"/>
     </tipos>
 </pizzas>

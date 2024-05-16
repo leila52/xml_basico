@@ -1,60 +1,35 @@
-<!ELEMENT afiliados (afiliado+)>
-<!ELEMENT afiliado (DNI | NIE, nombre, apellidos, situacion_laboral, fecha_nacimiento, bajas?, prestaciones_cobradas?)>
-<!ELEMENT bajas (baja*)>
-<!ELEMENT baja (causa, fecha_inicio, fecha_final?)>
-<!ELEMENT prestaciones_cobradas (prestacion+)>
-<!ELEMENT prestacion (cantidad, fecha_inicio, fecha_final)>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE seguridadSocial[
+<!ELEMENT seguridadSocial (afiliado+)>
+<!ELEMENT afiliado (DNI, NIE?, nombre, apellidos, situacion_laboral, fecha_nacimiento, listado_bajas, listado_prestaciones)>
 <!ELEMENT DNI (#PCDATA)>
 <!ELEMENT NIE (#PCDATA)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT apellidos (#PCDATA)>
 <!ELEMENT situacion_laboral (#PCDATA)>
-<!ELEMENT fecha_nacimiento (dia, mes, anio)>
-<!ELEMENT dia (#PCDATA)>
-<!ELEMENT mes (#PCDATA)>
-<!ELEMENT anio (#PCDATA)>
-<!ELEMENT causa (#PCDATA)>
-<!ELEMENT fecha_inicio (#PCDATA)>
-<!ELEMENT fecha_final (#PCDATA)>
-<!ELEMENT cantidad (#PCDATA)>
+<!ATTLIST situacion_laboral tipo (en_paro | en_activo | jubilado | edad_no_laboral) #REQUIRED>
+<!ELEMENT fecha_nacimiento EMPTY>
+<!ATTLIST fecha_nacimiento dia CDATA #REQUIRED mes CDATA #REQUIRED anyo CDATA #REQUIRED>
+<!ELEMENT listado_bajas (baja_empleado)>
+<!ELEMENT baja_empleado EMPTY>
+<!ATTLIST baja_empleado causa CDATA #REQUIRED fecha_inicio CDATA #REQUIRED fecha_final CDATA #IMPLIED>
+<!ELEMENT listado_prestaciones (cobradas)>
+<!ELEMENT cobradas EMPTY>
+<!ATTLIST cobradas cantidad CDATA #REQUIRED fecha_inicio CDATA #REQUIRED fecha_final CDATA #REQUIRED>
+]>
 
-<!DOCTYPE afiliados SYSTEM "seguridad_social.dtd">
-<afiliados>
+<seguridadSocial>
     <afiliado>
-        <DNI>12345678A</DNI>
-        <nombre>Juan</nombre>
-        <apellidos>Pérez Gómez</apellidos>
-        <situacion_laboral>en_activo</situacion_laboral>
-        <fecha_nacimiento>
-            <dia>15</dia>
-            <mes>05</mes>
-            <anio>1985</anio>
-        </fecha_nacimiento>
-        <bajas>
-            <baja>
-                <causa>Enfermedad</causa>
-                <fecha_inicio>2023-04-10</fecha_inicio>
-                <fecha_final>2023-05-20</fecha_final>
-            </baja>
-        </bajas>
-        <prestaciones_cobradas>
-            <prestacion>
-                <cantidad>500</cantidad>
-                <fecha_inicio>2022-03-01</fecha_inicio>
-                <fecha_final>2022-06-30</fecha_final>
-            </prestacion>
-        </prestaciones_cobradas>
+        <DNI>54463341</DNI>
+        <nombre>PEPA</nombre>
+        <apellidos>GARCÍA GÓMEZ</apellidos>
+        <situacion_laboral tipo="en_paro"></situacion_laboral>
+        <fecha_nacimiento dia="22" mes="2" anyo="2022"/>
+        <listado_bajas>
+            <baja_empleado causa="paro" fecha_inicio="22-2-2022"></baja_empleado>
+        </listado_bajas>
+        <listado_prestaciones>
+            <cobradas cantidad="213" fecha_inicio="21-3-2012" fecha_final="5-2-2019"></cobradas>
+        </listado_prestaciones>
     </afiliado>
-    <afiliado>
-        <NIE>X1234567Z</NIE>
-        <nombre>María</nombre>
-        <apellidos>López Martínez</apellidos>
-        <situacion_laboral>jubilado</situacion_laboral>
-        <fecha_nacimiento>
-            <dia>25</dia>
-            <mes>12</mes>
-            <anio>1950</anio>
-        </fecha_nacimiento>
-    </afiliado>
-</afiliados>
+</seguridadSocial>
