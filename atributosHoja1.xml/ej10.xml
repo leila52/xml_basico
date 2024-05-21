@@ -17,9 +17,24 @@
     </paises>
     <ciudades>
         <ciudad pais="id3">Osaka</ciudad>
-        <ciudad pais="id4">Oslo</ciudad>
-        <ciudad pais="id2">Sevilla</ciudad>
+        <ciudad >Oslo</ciudad>
+        <ciudad >Sevilla</ciudad>
         <ciudad pais="id3">Tokio</ciudad>
         <ciudad pais="id2">Viena</ciudad>
     </ciudades>
 </geografia>
+<!-- <geografia>
+<paises>
+<pais codpais="ARG">Argentina</pais>
+<pais codpais="AUS">Austria</pais>
+<pais codpais="JAP">Japón</pais>
+<pais codpais="NOR">Noruega</pais>
+</paises>
+<ciudades>
+<ciudad pais="JAP">Osaka</ciudad>
+<ciudad>Oslo</ciudad>
+<ciudad>Sevilla</ciudad>
+<ciudad pais="JAP">Tokio</ciudad>
+<ciudad pais="AUS">Viena</ciudad>
+</ciudades>
+</geografia>-->

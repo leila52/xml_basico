@@ -12,7 +12,6 @@
 <figuras>
     <cuadrado lados="4">ventana</cuadrado>
     <triangulo lados="3">señal</triangulo>
-    <!--el circulo no tiene atributo-->
     <circulo >plato</circulo>
     <otra lados="7"/>
 </figuras>
